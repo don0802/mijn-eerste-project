@@ -25,7 +25,7 @@
         <!-- Hero Section -->
         <div class="bg-blue-600 text-white py-20 px-8">
             <div class="max-w-4xl mx-auto">
-                <h1 class="text-5xl font-bold mb-4">Welkom bij mijn Pokémon Verzameling</h1>
+                <h1 class="text-5xl font-bold mb-4">Mijn Pokémon Verzameling</h1>
                 <p class="text-xl">Ontdek de wonderlijke wereld van Pokémon en bekijk mijn uitgebreide collectie!</p>
             </div>
         </div>
