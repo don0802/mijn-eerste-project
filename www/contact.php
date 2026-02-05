@@ -10,7 +10,7 @@
 
 <body class="bg-gray-100">
     <!-- Navigatie -->
-    <?php include 'menu.php'; ?>
+            <?php include 'menu.php'; ?>
     <!-- Main Content -->
     <div class="w-full">
         <!-- Hero Section -->
