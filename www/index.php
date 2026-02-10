@@ -36,8 +36,8 @@
                 <?php foreach ($cards as $card): ?>
                     <!-- Pokemon Card 1 -->
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" alt="Pikachu"
-                            class="w-full h-64 object-cover">
+                        <?php $pokemon_default_url = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/"; ?>
+                        <img src="<?php echo $pokemon_default_url . $card['pokedex_number']; ?>.png" alt="<?php echo $card['description']; ?>" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-2"><?php echo $card["name"]; ?></h3>
                             <p class="text-gray-600 mb-4"><?php echo $card["type"]; ?></p>

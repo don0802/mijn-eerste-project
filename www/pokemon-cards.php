@@ -6,12 +6,4 @@ $result = mysqli_query($conn, $sql);
 
 $cards = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
-foreach ($cards as $card):
-
-    echo $card["id"];
-    echo $card["name"];
-    echo $card["type"];
-
-endforeach;
-
 ?>

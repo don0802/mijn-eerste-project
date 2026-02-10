@@ -1,3 +1,4 @@
+<?php include 'pokemon-cards.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,9 +11,9 @@
 
 <body class="bg-gray-100">
     <!-- Navigatie -->
-     <nav class="bg-gray-800 p-4">
+    <nav class="bg-gray-800 p-4">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-        <div class="text-white text-2xl font-bold">Pokédex</div>
+            <div class="text-white text-2xl font-bold">Pokédex</div>
             <ul class="flex space-x-6">
                 <?php include 'menu.php'; ?>
             </ul>
@@ -32,106 +33,22 @@
         <div class="max-w-7xl mx-auto px-8 py-12">
             <h2 class="text-3xl font-bold mb-8">Mijn Favoriete Pokémon</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Pokemon Card 1 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" alt="Pikachu"
-                        class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Pikachu</h3>
-                        <p class="text-gray-600 mb-4">Elektrisch type Pokémon</p>
-                        <a href="#" class="text-blue-600 hover:text-blue-800">Meer informatie →</a>
+                <?php foreach ($cards as $card): ?>
+                    <!-- Pokemon Card 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <?php $pokemon_default_url = "https://assets.pokemon.com/assets/cms2/img/pokedex/full/"; ?>
+                        <img src="<?php echo $pokemon_default_url . $card['pokedex_number']; ?>.png" alt="<?php echo $card['description']; ?>" class="w-full h-64 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2"><?php echo $card["name"]; ?></h3>
+                            <p class="text-gray-600 mb-4"><?php echo $card["type"]; ?></p>
+                            <a href="#" class="text-blue-600 hover:text-blue-800">Meer informatie →</a>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Pokemon Card 2 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt="Charmander"
-                        class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Charmander</h3>
-                        <p class="text-gray-600 mb-4">Vuur type Pokémon</p>
-                        <a href="#" class="text-blue-600 hover:text-blue-800">Meer informatie →</a>
-                    </div>
-                </div>
-
-                <!-- Pokemon Card 3 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" alt="Squirtle"
-                        class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Squirtle</h3>
-                        <p class="text-gray-600 mb-4">Water type Pokémon</p>
-                        <a href="#" class="text-blue-600 hover:text-blue-800">Meer informatie →</a>
-                    </div>
-                </div>
-
-                <!-- Pokemon Card 4 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" alt="Bulbasaur"
-                        class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Bulbasaur</h3>
-                        <p class="text-gray-600 mb-4">Gras/Gift type Pokémon</p>
-                        <a href="#" class="text-blue-600 hover:text-blue-800">Meer informatie →</a>
-                    </div>
-                </div>
-
-                <!-- Pokemon Card 5 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png" alt="Mewtwo"
-                        class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Mewtwo</h3>
-                        <p class="text-gray-600 mb-4">Psychisch type Pokémon</p>
-                        <a href="#" class="text-blue-600 hover:text-blue-800">Meer informatie →</a>
-                    </div>
-                </div>
-
-                <!-- Pokemon Card 6 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png" alt="Charizard"
-                        class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Charizard</h3>
-                        <p class="text-gray-600 mb-4">Vuur/Vliegend type Pokémon</p>
-                        <a href="#" class="text-blue-600 hover:text-blue-800">Meer informatie →</a>
-                    </div>
-                </div>
-
-                <!-- Pokemon Card 7 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png" alt="Blastoise"
-                        class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Blastoise</h3>
-                        <p class="text-gray-600 mb-4">Water type Pokémon</p>
-                        <a href="#" class="text-blue-600 hover:text-blue-800">Meer informatie →</a>
-                    </div>
-                </div>
-
-                <!-- Pokemon Card 8 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png" alt="Venusaur"
-                        class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Venusaur</h3>
-                        <p class="text-gray-600 mb-4">Gras/Gift type Pokémon</p>
-                        <a href="#" class="text-blue-600 hover:text-blue-800">Meer informatie →</a>
-                    </div>
-                </div>
-
-                <!-- Pokemon Card 9 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/144.png" alt="Articuno"
-                        class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Articuno</h3>
-                        <p class="text-gray-600 mb-4">IJs/Vliegend type Pokémon</p>
-                        <a href="#" class="text-blue-600 hover:text-blue-800">Meer informatie →</a>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
+
+        <?php include 'socials.php'; ?>
 
         <!-- Footer -->
         <footer class="bg-gray-800 text-white py-12">
@@ -160,4 +77,4 @@
     </div>
 </body>
 
-</html>
+</html> 
