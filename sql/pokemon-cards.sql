@@ -16,3 +16,6 @@ INSERT INTO cards (name, pokedex_number, type, description) VALUES
 ('Blastoise', 009, 'Water', 'Water type Pokémon'),
 ('Venusaur', 003, 'Gras/Gift', 'Gras/Gift type Pokémon'),
 ('Articuno', 144, 'IJs/Vliegend', 'IJs/Vliegend type Pokémon');
+
+-- UPDATE cards
+-- SET pokedex_number = LPAD(pokedex_number, 3, '0');
